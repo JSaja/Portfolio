@@ -50,8 +50,7 @@ Server:
 
 Client:
 	Upon execution, twitterTrend_client is given the server's IP address, port number, and 
-	a path to a file containing city names (clientX.in), which will later be matched with their 
-	trending information in a database file (TwitterDB.txt) on the server side. First, the client 
+	a path to a file containing city names (clientX.in), which will later be matched with their trending information in a database file (TwitterDB.txt) on the server side. First, the client 
 	connects to the server. After the server and client exchange handshaking messages, the client 
 	sends a request containing a city name to the server. The client then waits for the server to 
 	send a response containing the top three trends in that particular city. This information is 
