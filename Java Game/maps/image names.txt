@@ -1,0 +1,70 @@
+# Names of pictures to use
+# Format: symbol , file name
+# Map is represented by a one-character symbol. This file says which tile to draw
+#	when that symbol is encountered
+# Symbol is also the key to a dictionary of images
+# You can also use this file to load images not used for terrain tiles
+
+# Actors (player, monsters, etc.)
+player , player.png
+human , body masked.png
+alien , alien.png
+lizard , lizardvisible.png
+blueSoldier,blueSoldier.png
+blueTank,blueTank.png
+coldhands,coldhands.png
+dragon,dragon.png
+gaara,gaara.png
+Genji,Genji.png
+giant,giant.png
+naruto,naruto.png
+pirate,pirate.png
+redSoldier,redSoldier.png
+redTank,redTank.png
+rockLee,rockLee.png
+sasuke,sasuke.png
+shikamaru,shikamaru.png
+shinigami,shinigami.png
+whitewalker, whitewalker.png
+robotboss , robotboss.png
+
+# Items
+g , gold.png
+p , potion.png
+2 , potion2.png
+o , orb.png
+
+# Terrain (grass, trees, castles, etc.)
+. , grass.png
+l , lava.png
+^ , mountain.png
+T , tree.png
+~ , water.png
+- , bridge.png
+| , bridge2.png
+3 , bridge3.png
+O , portal.png
+D , portal2.png
+M , magicportal.png
+B , boulder.png
+F , cavefloortiles.png
+C , caveborder.png
+d , dark.png
+u , brick.png
+r , bluesky.png
+s , cloud.png
+k , key1.png
+Y , lock1.png
+Z , lock2.png
+v , redcarpet.png
+W , treasure.png
+w , treasureopen.png
+/ , spotlightleft.png
+\ , spotlightright.png
+* , firework.png
+#o , white.png , A white square. Use if nothing is at that spot.
+
+# Misc
+background yellow , background yellow.png
+background white  , background.png
+
