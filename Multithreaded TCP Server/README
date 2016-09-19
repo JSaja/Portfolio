@@ -62,30 +62,30 @@ Client:
 	make, the server is notified and the connection is closed.
 
 The 20 cities that the client can request for simulated trends are:
-Minneapolis
-Paris
-London
-Melbourne
-Perth
-Sydney
-Vienna
-BuenosAires
-Canberra
-Minsk
-Brasilia
-Rio
-Calgary
-Montreal
-Toronto
-Vancouver
-Bordeaux
-Berlin
-Frankfurt
-Munich
-Delhi
-Mumbai
-Austin
-Boston
-Chicago
-Newyork
+- Minneapolis
+- Paris
+- London
+- Melbourne
+- Perth
+- Sydney
+- Vienna
+- BuenosAires
+- Canberra
+- Minsk
+- Brasilia
+- Rio
+- Calgary
+- Montreal
+- Toronto
+- Vancouver
+- Bordeaux
+- Berlin
+- Frankfurt
+- Munich
+- Delhi
+- Mumbai
+- Austin
+- Boston
+- Chicago
+- Newyork
 
