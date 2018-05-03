@@ -3,7 +3,7 @@ import math
 import numpy as np
 import numpy.random as nprand
 import random
-import mnist_loader
+import mnistLoader
 import time
 
 class Network(object):
@@ -61,7 +61,7 @@ class Network(object):
 
 		nablaB, nablaW = self.backprop(inputVectors, outputVectors)
 
-		self.weights = [(1-lmbda*(learningRate/n)*w)-(learningRate/len(miniBatch)) * nw for w, nw in zip(self.weights, nablaW)]
+		self.weights = [(1-lmbda*(learningRate/n))*w-(learningRate/len(miniBatch)) * nw for w, nw in zip(self.weights, nablaW)]
 		self.biases = [b-(learningRate/len(miniBatch)) * nb for b, nb in zip(self.biases, nablaB)]
 
 
@@ -84,8 +84,8 @@ class Network(object):
 		for i, ele in enumerate(zs[-1]):
 			outputSoftmax[i] = self.softMax(ele)
 
-		#backward pass, output layer
-		delta = (activations[-1] - y) * sigmoidPrime(zs[-1])
+		#backward pass, output layer, delta calculated using cross-entropy
+		delta = (activations[-1] - y)
 		nablaB[-1] = np.array([[sum(ele)] for ele in delta])
 		nablaW[-1] = np.dot(delta, activations[-2].transpose())
 
@@ -119,20 +119,20 @@ def sigmoidPrime(z):
 
 
 def main():
-	trd, vd, td = mnist_loader.load_data_wrapper()
+	trd, vd, td = mnistLoader.loadDataWrapper()
 	inputNeurons = 784
-	hiddenNeurons1 = 78
+	hiddenNeurons1 = 80
 	outputNeurons = 10
 
 	startTime = time.clock()
 	#If we already have a trained net, start with the trained net
-	try:
-		with open("vars.pkl", 'rb') as f:
-			net = _pickle.load(f)
-	except:				
-		net = Network([inputNeurons, hiddenNeurons1, outputNeurons])
+	# try:
+	# 	with open("vars.pkl", 'rb') as f:
+	# 		net = _pickle.load(f)
+	# except:				
+	net = Network([inputNeurons, hiddenNeurons1, outputNeurons])
 
-	net.SGD(trd, 20, 10, 1.0, 0.1, testData=td, validationData=vd)
+	net.SGD(trd, 30, 10, 0.5, 5, testData=td, validationData=vd)
 	print("Total time elapsed: {} seconds.".format(time.clock()-startTime))
 
 	#Save the completely trained net
