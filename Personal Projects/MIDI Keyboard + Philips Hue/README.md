@@ -14,3 +14,4 @@ Currently supported devices:
  
 Notes on the current state of development:
   - Latency is the biggest obstacle to overcome at this point in time.
+  - Sensitive objects such as knobs will inherently provide too many requests to the API in a short amount of time, breaking the program.
