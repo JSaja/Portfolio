@@ -2,7 +2,6 @@ To run, you will need to utilize Command prompt or Terminal,
 Navigate to the "C, C++, Java/Java Game" directory, and then run the command: java -jar Game.jar
 
 You will then be presented with the main screen:
-![Main screen](https://imgur.com/nWR3hJv)
 
 - Simulated dialog tree
 - Simple path finder
