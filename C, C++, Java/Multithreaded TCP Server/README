@@ -1,27 +1,19 @@
-/* CSci4061 Assignment 4
-* name: John Saja,  Ian Stanton
-*/
+Authors: John Saja, Ian Stanton
 
- -------
-|Purpose|
- -------
-The purpose of this assignment is to get comfortable with network programming by implementing a 
-multi-threaded twitterTrend server and twitterTrend client. The server receives city names from 
+*Purpose*:
+The purpose of this program is to get comfortable with network programming by implementing a 
+multi-threaded "twitterTrend" server and "twitterTrend" client. The server receives city names from 
 clients, and returns to the the top three trending keywords for each city.  The server is able 
 to serve multiple concurrent clients, with each thread handling a client program. A communication 
 protocol is also implemented in order to send and receive data through the network.
 
-
- -----------
-|Compilation|
- -----------
+*Compilation*:
 To compile the program, use the command "make" from the terminal, given that you
 are in the correct directory. To remove the .o, executable, and result files produced
 by the makefile, simply use the command "make clean".
 
- ---------
-|Execution|
- ---------
+
+*Execution*:
 To execute the newly made twitterTrend_server executable, run this command from the terminal:
 "./twitterTrend_server port_number num_threads".
 
@@ -31,9 +23,7 @@ To execute the newly made twitterTrend_client executable, run this command from 
 NOTE: You must run the twitterTrend_server executable before running the twitterTrend_client 
 	  executable.
 
- ---------------------
-|What the program does|
- ---------------------
+*What the program does*:
 Server:
 	Upon execution, twitterTrend_server is given a port number as its first argument. The 
 	maximum number of threads to produce is passed in as its second argument. First, the 
