@@ -1,0 +1,91 @@
+/* CSci4061 Assignment 4
+* name: John Saja,  Ian Stanton
+*/
+
+ -------
+|Purpose|
+ -------
+The purpose of this assignment is to get comfortable with network programming by implementing a 
+multi-threaded twitterTrend server and twitterTrend client. The server receives city names from 
+clients, and returns to the the top three trending keywords for each city.  The server is able 
+to serve multiple concurrent clients, with each thread handling a client program. A communication 
+protocol is also implemented in order to send and receive data through the network.
+
+
+ -----------
+|Compilation|
+ -----------
+To compile the program, use the command "make" from the terminal, given that you
+are in the correct directory. To remove the .o, executable, and result files produced
+by the makefile, simply use the command "make clean".
+
+ ---------
+|Execution|
+ ---------
+To execute the newly made twitterTrend_server executable, run this command from the terminal:
+"./twitterTrend_server port_number num_threads".
+
+To execute the newly made twitterTrend_client executable, run this command from the terminal:
+"./twitterTrend_client server_host_name server_port_number file_path".
+
+NOTE: You must run the twitterTrend_server executable before running the twitterTrend_client 
+	  executable.
+
+ ---------------------
+|What the program does|
+ ---------------------
+Server:
+	Upon execution, twitterTrend_server is given a port number as its first argument. The 
+	maximum number of threads to produce is passed in as its second argument. First, the 
+	server opens up a connection on the given port number. The server then waits for clients 
+	to connect. Once a client connects, it is added to a shared queue. As long as the server is 
+	running, it will continue to listen for new client connections. The specified number of 
+	threads are then created. Each thread will then access the shared queue to obtain a client 
+	and process it. Once this process is initialized, the server will wait for the client to 
+	send its request containing a city name. The server will then look up the trend data 
+	corresponding to this particular city, and send it to the client. This process is repeated 
+	for each city in the client file. Once the client has no more requests to make, the server 
+	is notified and the connection is closed. 
+	
+
+Client:
+	Upon execution, twitterTrend_client is given the server's IP address, port number, and  
+	a path to a file containing city names (clientX.in), which will later be matched with their
+	trending information in a database file (TwitterDB.txt) on the server side. First, the client 
+	connects to the server. After the server and client exchange handshaking messages, the client 
+	sends a request containing a city name to the server. The client then waits for the server to 
+	send a response containing the top three trends in that particular city. This information is 
+	then exported to a result file (clientX.in.result). The result file will contain a list of the 
+	cities contained in the input file (clientX.in), along with their trend data. For example, 
+	client2.in.result will contain the following: "Chicago : Clippers,Tannehill,TOPDebate". This 
+	process is repeated for each city in the client file. Once the client has no more requests to 
+	make, the server is notified and the connection is closed.
+
+The 20 cities that the client can request for simulated trends are:
+- Minneapolis
+- Paris
+- London
+- Melbourne
+- Perth
+- Sydney
+- Vienna
+- BuenosAires
+- Canberra
+- Minsk
+- Brasilia
+- Rio
+- Calgary
+- Montreal
+- Toronto
+- Vancouver
+- Bordeaux
+- Berlin
+- Frankfurt
+- Munich
+- Delhi
+- Mumbai
+- Austin
+- Boston
+- Chicago
+- Newyork
+
