@@ -1,0 +1,139 @@
+.main {
+	background-image: url('bbackground.png');
+	font-family: "Trebuchet MS";
+	font-size: 32px;
+}
+
+.heading {
+	font-size: 24px;
+	margin: 0 auto;
+	text-align: center;
+	width: 50%;
+}
+
+	.app {
+		margin: 0 auto;
+		width: 75%;
+		//border: 2px solid red;
+	}
+
+		#subheading {
+			font-size: 18px;	
+			margin: 0 auto;
+			text-align: center;
+			padding-bottom: 10px;
+			vertical-align: top;
+			width: 100%;
+		}
+
+		.bits {
+			//border: 2px solid purple;
+			margin: 0 auto;
+			padding-bottom: 20px;
+			width: 50%;
+		}
+
+			.inputHeading {	
+				font-size: 18px;
+				margin: 0 auto;s
+			}
+			
+			#bits {
+				margin: 0 auto;
+				padding-bottom: 3px;
+				text-align: center;
+				vertical-align: top;
+			}
+			
+			.numBits {
+				//border: 2px solid blue;
+				margin: 0 auto;
+				text-align: center;
+				width: 50%;
+				min-width: 80%;
+				max-height: 100%;			
+			}
+
+				#numBits {
+					font-family: verdana;
+					font-size: 16px;
+					vertical-align: middle;
+					width: 40%;
+				}
+				
+				.buttons {
+					background: none;
+					display: inline-block;
+					//height: 40%;
+					outline: 0;
+					vertical-align: bottom;
+					position: absolute;
+				}
+
+					#up {
+							background: none;
+							border: 1px solid black;	
+							display: block;
+							//height: 17px;
+							margin: 0 auto;
+							outline: 0;							
+							width: 100%;
+						}
+
+					#down {
+							border: 1px solid black;
+							background: none;
+							display: block;
+							//height: 17px;
+							margin: 0 auto;
+							outline: 0;
+							transform: rotate(180deg);
+							width: 100%;
+					}
+
+		.input {
+			//border: 2px solid orange;
+			margin: 0 auto;
+			width: 50%;	
+		}
+
+			#number {
+				//border: 2px dotted chartreuse;
+				text-align: center;
+			}
+
+			#input {
+				//border: 2px solid red;
+				font-family: verdana;
+				font-size: 16px;
+				display: block;
+				margin: 0 auto;
+				vertical-align: middle;
+				width: 50%;
+			}
+
+
+		.output {
+			//border: 2px solid orange;
+			margin: 0 auto;
+			word-wrap: break-word;
+		}
+			
+			#binary {
+				font-family: calibri;
+				font-size: 32px;
+				font-weight: 500;
+				text-align: center;
+				outline:none;
+			}
+
+			::selection {
+				background-color: #dddddd;
+			}
+
+			#copy {
+				background: none;
+				outline: none;
+				margin: 0 auto;
+				display: block;
+			}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Binary</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="clipboard.js-master/dist/clipboard.min.js"></script>
+		<script src="ngclipboard-master/dist/ngclipboard.min.js"></script>
+		<script src="testJS.js"></script>
+		<link rel="stylesheet" type="text/css" href="myCSS2.css">
+		<link rel="stylesheet" type="text/css" href="extension.css"
+		<link rel="manifest" href="manifest.json">
+		<meta name="viewport" content="width=500px", initial-scale=1" charset="UTF-8">
+	</head>
+
+	<body class="main">
+		<div ng-app="myApp" ng-controller="myCtrl">
+			<p class="heading">Realtime Binary<p>
+
+			<div class="app">
+				<p id="subheading">Decimal or Hexadecimal to Binary<p>
+
+				<div class="bits">
+					<p class="inputHeading" id="bits">Input required bits</p>
+
+					<div class="numBits">
+						<input id="numBits" ng-model="numBits">{{selectedBit}}</input>
+
+						<div class="buttons">
+							<button id="up" ng-click="upDwn('up')" height="3px">^</button>
+							<button id="down" ng-click="upDwn('dwn')">^</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="input">
+					<p class="inputHeading" id="number">Input number</p>
+					<input type="text" ng-model="varX" id="input"></input>
+				</div>
+
+				<div class="output">
+					<p id="binary">{{convertBinary(varX, numBits)}}</p>
+					<button id="copy" ngclipboard data-clipboard-target="#binary">Copy Output</button>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>
